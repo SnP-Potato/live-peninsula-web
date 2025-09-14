@@ -1,0 +1,23 @@
+@theme {
+  --color-header: #03050A;
+  --color-primary: #080A0F;
+  --color-secondary: #1C1E24;
+  --color-alt: #303238;
+  --color-line: #8E9096;
+  --color-accent: #00A6FB;
+  --color-textlight: #F0F0F5;
+  --color-textdark: #0A0A0F;
+
+  --color-altonyx: #353843;
+  --color-altblue: #283246;
+  --color-red: #FF0000;
+  --color-green: #00FF00;
+  --color-blue: #0000FF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono); */
+}

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/NanumSquareNeo-Variable.woff2') format('woff2-variations');
+}
+
+@theme {
+  --font-nsn: 'NanumSquareNeo', sans-serif;
+}
