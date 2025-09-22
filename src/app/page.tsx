@@ -6,13 +6,13 @@ export default function Home() {
     <main className="min-h-screen text-textlight bg-primary">
       <section className="w-full h-lvh flex flex-col items-center justify-center bg-primary text-textlight px-6 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-          Dynamic Notch 앱을 소개합니다
+          Live Peninsula 앱을 소개합니다
         </h1>
         <p className="text-lg sm:text-xl max-w-2xl mb-2">
           호연이 형이 이렇게 만들라고 했어요
         </p>
         <p className="text-lg sm:text-xl max-w-2xl">
-          Dynamic Notch는 저희가 하는 졸업 프로젝트로,
+          Live Peninsula는 저희가 하는 졸업 프로젝트로,
           <br />
           실패하면 졸업을 못해서 ㅈ되요
         </p>

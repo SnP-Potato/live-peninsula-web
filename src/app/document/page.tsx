@@ -1,6 +1,6 @@
 export default function DocumentPage() {
   return (
-    <main className="min-h-screen bg-primary text-textlight">
+    <main className="min-h-screen pt-16 bg-primary text-textlight">
       <section className="max-w-5xl mx-auto px-6 py-12 text-justify">
         <h1 className="text-3xl font-bold mb-6">앱 사용 가이드</h1>
 

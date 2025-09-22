@@ -31,8 +31,8 @@ export default function FAQPage() {
   };
 
   return (
-    <main className="min-h-screen bg-primary text-textlight px-6 py-16">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+    <main className="min-h-screen pt-16 bg-primary text-textlight px-6 py-16">
+      <div className="max-w-6xl mt-16 mx-auto flex flex-col md:flex-row gap-12">
         {/* 왼쪽: 큰 타이틀 */}
         <div className="md:w-1/3 flex items-start justify-center md:justify-start">
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">

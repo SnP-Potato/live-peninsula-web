@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { HiOutlineSearch } from 'react-icons/hi';
 
-export default function Header() {
+export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [query, setQuery] = useState('');
   const router = useRouter();
@@ -48,7 +48,7 @@ export default function Header() {
         {/* 왼쪽: 로고 + 내비게이션 */}
         <div className="flex items-center gap-8">
           <Link href="/" className="text-xl font-semibold">
-            Dynamic Notch
+            Live Peninsula
           </Link>
           <div className="flex gap-6 text-sm">
             <Link href="/document" className="hover:text-accent transition">

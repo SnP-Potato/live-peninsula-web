@@ -1,5 +1,6 @@
 import { HiDownload } from "react-icons/hi";
 
+
 export default function DownloadPage() {
   return (
     <main className="min-h-screen bg-primary text-textlight flex items-center justify-center px-6">
@@ -12,12 +13,12 @@ export default function DownloadPage() {
         <ul className="space-y-4">
           <li>
             <a
-              href="/downloads/my-app-setup-v1.0.0.dmg"
+              href="/downloads/live-peninsula-beta.dmg"
               download
               className="flex items-center justify-center gap-3 px-6 py-3 bg-accent text-white rounded-xl hover:bg-secondary-alt transition font-medium shadow-md"
             >
               <HiDownload className="w-5 h-5" />
-              macOS 설치 파일 (.dmg)
+              최신 버전 (.dmg)
             </a>
           </li>
         </ul>
