@@ -1,11 +1,11 @@
 export default function DocumentPage() {
   return (
-    <main className="min-h-screen pt-16 bg-primary text-textlight">
-      <section className="max-w-5xl mx-auto px-6 py-12 text-justify">
-        <h1 className="text-3xl font-bold mb-6">앱 사용 가이드</h1>
+    <main className="bg-primary text-textlight min-h-screen pt-16">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-justify">
+        <h1 className="mb-6 text-3xl font-bold">앱 사용 가이드</h1>
 
         <section className="mb-10">
-          <h2 className="text-xl font-semibold mb-2">0-1. 영어 텍스트 확인</h2>
+          <h2 className="mb-2 text-xl font-semibold">0-1. 영어 텍스트 확인</h2>
           <p className="">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas
             eget leo in tempor. Phasellus iaculis tempor mauris, non cursus urna
@@ -71,7 +71,7 @@ export default function DocumentPage() {
           </p>
         </section>
         <section className="mb-10">
-          <h2 className="text-xl font-semibold mb-2">0-1. 영어 텍스트 확인</h2>
+          <h2 className="mb-2 text-xl font-semibold">0-1. 영어 텍스트 확인</h2>
           <p className="">
             대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.
             법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이
@@ -217,7 +217,7 @@ export default function DocumentPage() {
           </p>
         </section>
         <section className="mb-10">
-          <h2 className="text-xl font-semibold mb-2">1. 앱 소개</h2>
+          <h2 className="mb-2 text-xl font-semibold">1. 앱 소개</h2>
           <p className="">
             이 앱은 사용자들의 일상 생산성을 높이기 위해 만들어졌습니다.
             맥에서만 사용할 수 있으며, 직관적인 UI와 강력한 기능을 갖추고

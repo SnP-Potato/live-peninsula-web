@@ -40,11 +40,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full bg-header shadow-md z-50 transition-transform duration-300 ${
+      className={`bg-header fixed top-0 z-50 w-full shadow-md transition-transform duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4 text-textlight">
+      <div className="text-textlight mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* 왼쪽: 로고 + 내비게이션 */}
         <div className="flex items-center gap-8">
           <Link href="/" className="text-xl font-semibold">
@@ -70,13 +70,13 @@ export default function Navbar() {
             placeholder="Search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="px-4 py-2 rounded-md border border-line bg-secondary text-textlight placeholder:text-textlight/60 focus:outline-none focus:ring-2 focus:ring-line text-sm"
+            className="border-line bg-secondary text-textlight placeholder:text-textlight/60 focus:ring-line rounded-md border px-4 py-2 text-sm focus:ring-2 focus:outline-none"
           />
           <button
             type="submit"
-            className="absolute right-1 top-1/2 -translate-y-1/2 px-2 text-textlight hover:text-secondary-alt"
+            className="text-textlight hover:text-secondary-alt absolute top-1/2 right-1 -translate-y-1/2 px-2"
           >
-            <HiOutlineSearch className="w-5 h-5" />
+            <HiOutlineSearch className="h-5 w-5" />
           </button>
         </form>
       </div>

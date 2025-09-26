@@ -31,35 +31,35 @@ export default function FAQPage() {
   };
 
   return (
-    <main className="min-h-screen pt-16 bg-primary text-textlight px-6 py-16">
-      <div className="max-w-6xl mt-16 mx-auto flex flex-col md:flex-row gap-12">
+    <main className="bg-primary text-textlight min-h-screen px-6 py-16 pt-16">
+      <div className="mx-auto mt-16 flex max-w-6xl flex-col gap-12 md:flex-row">
         {/* 왼쪽: 큰 타이틀 */}
-        <div className="md:w-1/3 flex items-start justify-center md:justify-start">
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+        <div className="flex items-start justify-center md:w-1/3 md:justify-start">
+          <h1 className="text-5xl font-extrabold tracking-tight md:text-6xl">
             FAQ
           </h1>
         </div>
 
         {/* 오른쪽: 질문/답변 */}
-        <div className="md:w-2/3 space-y-4">
+        <div className="space-y-4 md:w-2/3">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="border border-secondary-alt rounded-xl bg-secondary shadow-md"
+              className="border-secondary-alt bg-secondary rounded-xl border shadow-md"
             >
               <button
                 onClick={() => toggle(i)}
-                className="flex justify-between items-center w-full px-5 py-4 text-left text-lg font-semibold hover:bg-secondary-alt transition rounded-xl"
+                className="hover:bg-secondary-alt flex w-full items-center justify-between rounded-xl px-5 py-4 text-left text-lg font-semibold transition"
               >
                 <span>{faq.question}</span>
                 {openIndex === i ? (
-                  <HiMinus className="w-5 h-5" />
+                  <HiMinus className="h-5 w-5" />
                 ) : (
-                  <HiPlus className="w-5 h-5" />
+                  <HiPlus className="h-5 w-5" />
                 )}
               </button>
               {openIndex === i && (
-                <div className="px-5 pb-4 text-textlight/80 leading-relaxed text-sm">
+                <div className="text-textlight/80 px-5 pb-4 text-sm leading-relaxed">
                   {faq.answer}
                 </div>
               )}
