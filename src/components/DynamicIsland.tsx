@@ -6,16 +6,16 @@ export default function DynamicIsland() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="flex justify-center my-16 mb-20">
+    <div className="my-16 mb-20 flex justify-center">
       <div
-        className={`bg-gray-800 rounded-b-3xl h-9 flex items-center justify-center cursor-pointer border border-gray-700 relative overflow-hidden transition-all duration-500 ease-out ${
-          isHovered ? 'w-80 h-11' : 'w-35'
+        className={`relative flex h-9 cursor-pointer items-center justify-center overflow-hidden rounded-b-3xl border border-gray-700 bg-gray-800 transition-all duration-500 ease-out ${
+          isHovered ? 'h-11 w-80' : 'w-35'
         }`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <div
-          className={`flex items-center justify-around w-full text-sm font-medium transition-opacity duration-300 ${
+          className={`flex w-full items-center justify-around text-sm font-medium transition-opacity duration-300 ${
             isHovered ? 'opacity-100 delay-200' : 'opacity-0'
           }`}
         >
@@ -23,7 +23,7 @@ export default function DynamicIsland() {
             <a
               key={item}
               href="#"
-              className="text-textlight no-underline px-4 py-2 rounded-2xl transition-all duration-200 hover:bg-white/10 hover:scale-105"
+              className="text-textlight rounded-2xl px-4 py-2 no-underline transition-all duration-200 hover:scale-105 hover:bg-white/10"
             >
               {item}
             </a>
