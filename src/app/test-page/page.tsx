@@ -1,6 +1,7 @@
 'use client';
 
 import DynamicIsland from '@/components/DynamicIsland';
+import HeaderIcon from '@/components/HeaderIcon';
 
 export default function TestPage() {
   return (
@@ -10,6 +11,12 @@ export default function TestPage() {
       <section>
         <h2 className="mb-4 text-xl font-semibold">Dynamic Island</h2>
         <DynamicIsland />
+        <h2 className="mb-4 text-xl font-semibold">Header Icon</h2>
+        <HeaderIcon />
+        <h2 className="mb-4 text-xl font-semibold">Downlaod Button</h2>
+        <h2 className="mb-4 text-xl font-semibold">Activity Item</h2>
+        <h2 className="mb-4 text-xl font-semibold">File Tray</h2>
+        <h2 className="mb-4 text-xl font-semibold">Acknowledge</h2>
       </section>
     </div>
   );
