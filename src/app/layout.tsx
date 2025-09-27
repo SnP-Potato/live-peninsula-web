@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
 import '../styles/globals.css';
 import '../styles/fonts.css';
-import Font from 'next/font/local'
-import Header from '../components/navbar';
-import Navbar from '../components/navbar';
+import Font from 'next/font/local';
+import Navbar from '@/components/navbar';
 
 const NanumSquareNeo = Font({
-  src: "../../public/fonts/NanumSquareNeo-Variable.woff2",
-  display: "swap",
-  variable: "--font-nsn",
+  src: '../../public/fonts/NanumSquareNeo-Variable.woff2',
+  display: 'swap',
+  variable: '--font-nsn',
 });
 
 export const metadata: Metadata = {
