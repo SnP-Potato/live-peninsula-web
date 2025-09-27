@@ -8,7 +8,7 @@ export default function DynamicIsland() {
   return (
     <div className="my-16 mb-20 flex justify-center">
       <div
-        className={`relative flex h-9 cursor-pointer items-center justify-center overflow-hidden rounded-b-3xl border border-gray-700 bg-gray-800 transition-all duration-500 ease-out ${
+        className={`relative flex h-9 cursor-pointer items-center justify-center overflow-hidden rounded-3xl border border-gray-700 bg-gray-800 transition-all duration-500 ease-out ${
           isHovered ? 'h-11 w-80' : 'w-35'
         }`}
         onMouseEnter={() => setIsHovered(true)}
