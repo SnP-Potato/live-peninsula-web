@@ -38,7 +38,6 @@ yarn-error.log*
 next-env.d.ts
 
 # prettier
-.prettierignore
 .prettierrc
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs
