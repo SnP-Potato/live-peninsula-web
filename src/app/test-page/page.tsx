@@ -3,6 +3,7 @@
 import DynamicIsland from '@/components/DynamicIsland';
 import HeaderIcon from '@/components/HeaderIcon';
 import DownlaodButton from '@/components/DownloadButton';
+import ActivityItem from '@/components/ActivityItem';
 
 export default function TestPage() {
   return (
