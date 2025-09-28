@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { HiOutlineSearch } from 'react-icons/hi';
+import { Search } from '@mui/icons-material';
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -76,7 +76,7 @@ export default function Navbar() {
             type="submit"
             className="text-textlight hover:text-secondary-alt absolute top-1/2 right-1 -translate-y-1/2 px-2"
           >
-            <HiOutlineSearch className="h-5 w-5" />
+            <Search className="h-5 w-5" />
           </button>
         </form>
       </div>

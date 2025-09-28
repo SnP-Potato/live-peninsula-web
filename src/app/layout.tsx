@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import '../styles/globals.css';
 import '../styles/fonts.css';
 import Font from 'next/font/local';
-import Navbar from '@/components/navbar';
+import DynamicIsland from '@/components/DynamicIsland';
 
 const NanumSquareNeo = Font({
   src: '../../public/fonts/NanumSquareNeo-Variable.woff2',
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html>
       <body className={`antialiased ${NanumSquareNeo.variable}`}>
-        <Navbar />
+        <DynamicIsland />
         <main>{children}</main>
       </body>
     </html>
