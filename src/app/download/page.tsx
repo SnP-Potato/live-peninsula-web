@@ -1,4 +1,4 @@
-import { HiDownload } from 'react-icons/hi';
+import { DownloadDone } from '@mui/icons-material';
 
 export default function DownloadPage() {
   return (
@@ -18,7 +18,7 @@ export default function DownloadPage() {
               download
               className="bg-accent hover:bg-secondary-alt flex items-center justify-center gap-3 rounded-xl px-6 py-3 font-medium text-white shadow-md transition"
             >
-              <HiDownload className="h-5 w-5" />
+              <DownloadDone className="h-5 w-5" />
               최신 버전 (.dmg)
             </a>
           </li>
