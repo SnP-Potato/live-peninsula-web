@@ -14,6 +14,10 @@ const faqs = [
       '홈페이지 상단의 "다운로드" 버튼을 클릭하면 다운로드 페이지로 이동합니다.',
   },
   {
+    question: '어떻게 쓰나요?',
+    answer: '설치 후, 상단 메뉴바 아이콘을 클릭하여 설정을 조정할 수 있습니다.',
+  },
+  {
     question: '지원하는 플랫폼은 무엇인가요?',
     answer: '현재는 MacOS를 지원하고 있습니다.',
   },
@@ -53,9 +57,9 @@ export default function FAQPage() {
               >
                 <span>{faq.question}</span>
                 {openIndex === i ? (
-                  <Add className="h-5 w-5" />
-                ) : (
                   <Remove className="h-5 w-5" />
+                ) : (
+                  <Add className="h-5 w-5" />
                 )}
               </button>
               {openIndex === i && (
