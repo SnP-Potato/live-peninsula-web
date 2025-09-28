@@ -1,32 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import React from 'react';
 
-export default function DownloadButton() {
-  const [isHovered, setIsHovered] = useState(false);
+interface DownloadButtonProps {
+  label?: string;
+}
 
+export default function DownloadButton({ label = 'Download For Mac' }: DownloadButtonProps) {
   return (
     <button
-      className={`relative inline-block cursor-pointer overflow-hidden rounded-3xl border-none bg-gradient-to-r from-blue-500 to-purple-600 px-12 py-6 text-xl font-bold text-white shadow-lg transition-all duration-500 ${
-        isHovered ? 'bg-blue-600' : 'bg-blue-500'
-      }`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      style={{
-        transform: isHovered
-          ? 'translateY(-4px) scale(1.07)'
-          : 'translateY(0) scale(1)',
-        boxShadow: isHovered
-          ? '0 20px 40px rgba(0, 122, 255, 0.45)'
-          : '0 8px 20px rgba(0, 0, 0, 0.25)',
-      }}
+      className="group relative inline-block rounded-3xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 text-lg font-semibold text-white transition-transform duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_35px_rgba(0,122,255,0.4)] overflow-hidden"
     >
-      <div
-        className={`absolute top-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-700 ${
-          isHovered ? 'left-full' : '-left-full'
-        }`}
-      />
-      <span className="relative z-10">Download for Mac</span>
+      {/* Shimmer effect */}
+      <div className="absolute top-0 left-[-100%] h-full w-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-all duration-500 group-hover:left-[100%]" />
+
+      {/* Label */}
+      <span className="relative z-10">{label}</span>
     </button>
   );
 }
