@@ -1,141 +1,117 @@
-'use client';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import DynamicIsland from '@/components/DynamicIsland';
-import HeaderIcon from '@/components/HeaderIcon';
-import DownloadButton from '@/components/DownloadButton';
-import ActivityItem from '@/components/ActivityItem';
-import FileTray from '@/components/FileTray';
-import Acknowledgement from '@/components/Acknowledgement';
-import { AlarmOutlined, Battery80, Bolt, Brightness4, CalendarMonth, Cloud, Lock, MusicNote, Star, Sunny, TimerOutlined, VolumeUp } from '@mui/icons-material';
-
-export default function DraftPage() {
+export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-black font-sans text-white">
-      <div className="mx-auto max-w-4xl px-5">
-        {/* Dynamic Island */}
-        <DynamicIsland />
+    <main className="text-textlight bg-primary min-h-screen">
+      <section className="bg-primary text-textlight flex h-lvh w-full flex-col items-center justify-center px-6 text-center">
+        <h1 className="mb-4 text-4xl font-bold sm:text-5xl">
+          Live Peninsula 앱을 소개합니다
+        </h1>
+        <p className="mb-2 max-w-2xl text-lg sm:text-xl">
+          호연이 형이 이렇게 만들라고 했어요
+        </p>
+        <p className="max-w-2xl text-lg sm:text-xl">
+          Live Peninsula는 저희가 하는 졸업 프로젝트로,
+          <br />
+          실패하면 졸업을 못해서 ㅈ되요
+        </p>
+      </section>
 
-        {/* Header */}
-        <header className="mb-16 text-center">
-          <HeaderIcon />
-          <h1 className="mb-5 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-6xl font-bold text-transparent">
-            Live Peninsula
-          </h1>
-          <p className="mb-10 text-2xl text-gray-400">Dynamic Island on Mac</p>
-          <DownloadButton />
-        </header>
+      <section className="bg-primary text-textlight flex h-svh w-full flex-col items-center justify-center px-6">
+        <h1 className="text-textlight mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+          지금 다운로드, 간단하게 시작하세요
+        </h1>
+        <p className="text-textlight/80 mb-8 max-w-xl text-center text-lg sm:text-xl">
+          지금 바로 다운로드하고 새로운 경험을 시작해보세요.
+        </p>
+        <Link
+          href="/download"
+          className="bg-secondary text-textlight hover:bg-secondary-alt rounded-xl px-6 py-3 shadow-md transition"
+        >
+          다운로드 페이지로 이동 →
+        </Link>
+      </section>
 
-        {/* Description Section */}
-        <section className="my-20 text-left">
-          <h2 className="mb-5 text-4xl font-bold">Description</h2>
-          <p className="mb-10 max-w-2xl text-xl text-gray-400">
-            The Dynamic Island on iPhone exists independently on the screen,
-            which seems to be why it's called an "Island." I think :) In our
-            case, it connects to the top of the screen, giving it the feeling of
-            a peninsula, so we decided to name it "Live Peninsula."
-          </p>
-        </section>
-
-        {/* Live Activity Section */}
-        <section className="my-20">
-          <h2 className="mb-5 text-4xl font-bold">Live Activity</h2>
-          <div className="my-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <ActivityItem
-              icon={<Battery80 className="h-8 w-8 text-green-500" />}
-              title="Battery"
-            />
-            <ActivityItem
-              icon={<MusicNote className="h-8 w-8 text-red-500" />}
-              title="Music"
-            />
-            <ActivityItem
-              icon={<VolumeUp className="h-8 w-8 text-blue-500" />}
-              title="Sound"
-            />
-            <ActivityItem
-              icon={<Star className="h-8 w-8 text-yellow-500" />}
-              title="Focus"
-              inDevelopment
-            />
-            <ActivityItem
-              icon={<TimerOutlined className="h-8 w-8 text-orange-500" />}
-              title="Timer"
-            />
-            <ActivityItem
-              icon={<Lock className="h-8 w-8 text-gray-500" />}
-              title="Lock Screen"
-              inDevelopment
-            />
-            <ActivityItem
-              icon={<Brightness4 className="h-8 w-8 text-yellow-400" />}
-              title="Brightness"
-              inDevelopment
-            />
-            <ActivityItem
-              icon={<AlarmOutlined className="h-8 w-8 text-red-500" />}
-              title="Alarm"
-              inDevelopment
-            />
+      <section className="mx-auto flex max-w-4xl flex-col gap-16 px-6 pb-24">
+        <div className="flex flex-col items-center gap-8 md:flex-row">
+          <div className="w-full md:w-1/2">
+            <div className="bg-secondary-alt text-textlight/60 flex aspect-video items-center justify-center rounded-xl">
+              <Image
+                src="/imgs/test-img1.png"
+                alt="기능 이미지"
+                width={600}
+                height={400}
+                className="rounded-xl"
+              />
+            </div>
           </div>
-        </section>
-
-        {/* File Tray Section */}
-        <section className="my-20">
-          <h2 className="mb-5 text-4xl font-bold">File Tray</h2>
-          <FileTray />
-        </section>
-
-        {/* Live Activity Section */}
-        <section className="my-20">
-          <h2 className="mb-5 text-4xl font-bold">Other</h2>
-          <div className="my-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3
-          ">
-            <ActivityItem
-              icon={<CalendarMonth className="h-8 w-8 text-green-500" />}
-              title="Calendar"
-            />
-            <ActivityItem
-              icon={<Cloud className="h-8 w-8 text-red-500" />}
-              title="Weather"
-              inDevelopment
-            />
-            <ActivityItem
-              icon={<Bolt className="h-8 w-8 text-blue-500" />}
-              title="Shortcut"
-              inDevelopment
-            />
-          </div>
-        </section>
-
-        {/* Support Section */}
-        <section className="my-20">
-          <h2 className="mb-5 text-4xl font-bold">Support</h2>
-          <div className="rounded-2xl border border-gray-700 bg-gray-800 p-10">
-            <p className="text-xl font-semibold text-blue-500">
-              Supports macOS 14.6 through macOS 26
+          <div className="w-full md:w-1/2">
+            <h2 className="mb-2 text-2xl font-bold">💻 간편한 설치</h2>
+            <p className="text-textlight/80 leading-relaxed">
+              클릭 한 번으로 앱을 다운로드하고 바로 사용하세요.
+              <br />
+              복잡한 설정 없이 즉시 시작할 수 있어요.
             </p>
           </div>
-        </section>
+        </div>
 
-        {/* Acknowledgments */}
-        <section className="my-20 mb-16">
-          <h2 className="mb-5 text-4xl font-bold">Acknowledgments</h2>
-          <div className="space-y-6 rounded-2xl border border-gray-700 bg-gray-800 p-10">
-            <Acknowledgement
-              icon="🎨"
-              title="Park Joo-yeon"
-              description="We express our gratitude for overseeing the overall app design."
-              color="bg-gradient-to-br from-pink-500 to-purple-500"
-            />
-            <Acknowledgement
-              icon="💬"
-              title="Koo Geon-mo"
-              description="We also thank for advice and feedback during app development."
-              color="bg-gradient-to-br from-green-500 to-green-600"
-            />
+        <div className="flex flex-col items-center gap-8 md:flex-row">
+          <div className="w-full md:order-2 md:w-1/2">
+            <div className="bg-secondary-alt text-textlight/60 flex aspect-video items-center justify-center rounded-xl">
+              <video
+                src="/vids/vid1.mp4"
+                autoPlay
+                muted
+                loop
+                className="w-full max-w-3xl rounded-xl shadow-lg"
+              />
+            </div>
           </div>
-        </section>
-      </div>
-    </div>
+          <div className="w-full md:order-1 md:w-1/2">
+            <h2 className="mb-2 text-2xl font-bold">⚙️ 유연한 커스터마이징</h2>
+            <p className="text-textlight/80 leading-relaxed">
+              호연이 형이 좋아하는 기능을 넣었어요.
+              <br />
+              이 앱은 호연이 형의 졸업을 위해 만들어진 앱이기 때문에,
+              <br />
+              호연이 형이 좋아하는 기능을 넣는 것이 중요해요.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-8 md:flex-row">
+          <div className="w-full md:w-1/2">
+            <div className="bg-secondary-alt text-textlight/60 flex aspect-video items-center justify-center rounded-xl">
+              <video
+                src="/vids/vid2.mp4"
+                autoPlay
+                muted
+                loop
+                className="w-full max-w-3xl rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+          <div className="w-full md:w-1/2">
+            <h2 className="mb-2 text-2xl font-bold">💦 좋아용 💦</h2>
+            <p className="text-textlight/80 leading-relaxed">
+              여러분 타입스크립트를 쓰세요
+              <br />
+              타입스크립트를 쓰면 빨라요
+              <br />
+              computer phile → comphile 😃
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-24 max-w-4xl px-6 pb-24 text-center">
+        <p className="text-md text-textlight/70">
+          더 많은 기능은{' '}
+          <span className="underline underline-offset-2">Docs</span>에서
+          확인하세요.
+        </p>
+      </section>
+    </main>
   );
 }
