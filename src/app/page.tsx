@@ -1,10 +1,10 @@
 'use client';
 
-import HeaderIcon from '@/components/HeaderIcon';
+import LogoIcon from '@/components/LogoIcon';
 import DownloadButton from '@/components/DownloadButton';
-import ActivityItem from '@/components/ActivityItem';
+import FeatureCard from '@/components/FeatureCard';
 import FileTray from '@/components/FileTray';
-import Acknowledgement from '@/components/Acknowledgement';
+import AcknowledgmentCard from '@/components/AcknowledgmentCard';
 import {
   AlarmOutlined,
   Battery80,
@@ -25,7 +25,7 @@ export default function DraftPage() {
       <div className="mx-auto max-w-4xl px-5 pt-24">
         {/* Header */}
         <section className="mt-20 mb-20 text-center">
-          <HeaderIcon />
+          <LogoIcon />
           <h1 className="mb-5 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-6xl font-bold text-transparent">
             Live Peninsula
           </h1>
@@ -48,38 +48,38 @@ export default function DraftPage() {
         <section className="my-20">
           <h2 className="mb-5 text-4xl font-bold">Live Activity</h2>
           <div className="my-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <ActivityItem
+            <FeatureCard
               icon={<Battery80 className="h-8 w-8 text-green-500" />}
               title="Battery"
             />
-            <ActivityItem
+            <FeatureCard
               icon={<MusicNote className="h-8 w-8 text-red-500" />}
               title="Music"
             />
-            <ActivityItem
+            <FeatureCard
               icon={<VolumeUp className="h-8 w-8 text-blue-500" />}
               title="Sound"
             />
-            <ActivityItem
+            <FeatureCard
               icon={<Star className="h-8 w-8 text-yellow-500" />}
               title="Focus"
               inDevelopment
             />
-            <ActivityItem
+            <FeatureCard
               icon={<TimerOutlined className="h-8 w-8 text-orange-500" />}
               title="Timer"
             />
-            <ActivityItem
+            <FeatureCard
               icon={<Lock className="h-8 w-8 text-gray-500" />}
               title="Lock Screen"
               inDevelopment
             />
-            <ActivityItem
+            <FeatureCard
               icon={<Brightness4 className="h-8 w-8 text-yellow-400" />}
               title="Brightness"
               inDevelopment
             />
-            <ActivityItem
+            <FeatureCard
               icon={<AlarmOutlined className="h-8 w-8 text-red-500" />}
               title="Alarm"
               inDevelopment
@@ -97,16 +97,16 @@ export default function DraftPage() {
         <section className="my-20">
           <h2 className="mb-5 text-4xl font-bold">Other</h2>
           <div className="my-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <ActivityItem
+            <FeatureCard
               icon={<CalendarMonth className="h-8 w-8 text-green-500" />}
               title="Calendar"
             />
-            <ActivityItem
+            <FeatureCard
               icon={<Cloud className="h-8 w-8 text-red-500" />}
               title="Weather"
               inDevelopment
             />
-            <ActivityItem
+            <FeatureCard
               icon={<Bolt className="h-8 w-8 text-blue-500" />}
               title="Shortcut"
               inDevelopment
@@ -128,13 +128,13 @@ export default function DraftPage() {
         <section className="my-20 mb-16">
           <h2 className="mb-5 text-4xl font-bold">Acknowledgments</h2>
           <div className="space-y-6 rounded-2xl border border-gray-700 bg-gray-800 p-10">
-            <Acknowledgement
+            <AcknowledgmentCard
               icon="🎨"
               title="Park Joo-yeon"
               description="We express our gratitude for overseeing the overall app design."
               color="bg-gradient-to-br from-pink-500 to-purple-500"
             />
-            <Acknowledgement
+            <AcknowledgmentCard
               icon="💬"
               title="Koo Geon-mo"
               description="We also thank for advice and feedback during app development."

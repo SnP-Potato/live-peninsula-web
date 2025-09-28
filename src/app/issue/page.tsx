@@ -1,4 +1,4 @@
-export default function DocumentPage() {
+export default function IssuePage() {
   return (
     <main className="bg-primary text-textlight min-h-screen pt-16">
       <section className="mx-auto max-w-5xl px-6 py-12 text-justify">

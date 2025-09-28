@@ -1,6 +1,6 @@
 import { DownloadDone } from '@mui/icons-material';
 
-export default function DownloadPage() {
+export default function ReleasesPage() {
   return (
     <main className="bg-primary text-textlight flex min-h-screen items-center justify-center px-6">
       <section className="bg-secondary w-full max-w-2xl rounded-2xl p-10 text-center shadow-lg">
