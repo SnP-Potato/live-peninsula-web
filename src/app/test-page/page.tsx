@@ -4,6 +4,7 @@ import DynamicIsland from '@/components/DynamicIsland';
 import HeaderIcon from '@/components/HeaderIcon';
 import DownlaodButton from '@/components/DownloadButton';
 import ActivityItem from '@/components/ActivityItem';
+import FileTray from '@/components/FileTray';
 
 import { Battery80, MusicNote, Search, Star, VolumeUp } from '@mui/icons-material';
 
@@ -29,6 +30,7 @@ export default function TestPage() {
         <ActivityItem icon={<MusicNote />} title="Screen Brightness" />
         <ActivityItem icon={<MusicNote />} title="Alarm" />
         <h2 className="mb-4 text-xl font-semibold">File Tray</h2>
+        <FileTray />
         <h2 className="mb-4 text-xl font-semibold">Acknowledge</h2>
       </section>
     </div>
