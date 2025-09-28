@@ -5,6 +5,7 @@ import HeaderIcon from '@/components/HeaderIcon';
 import DownlaodButton from '@/components/DownloadButton';
 import ActivityItem from '@/components/ActivityItem';
 import FileTray from '@/components/FileTray';
+import AcknowledgmentItem from '@/components/Acknowledgement';
 
 import { Battery80, MusicNote, Search, Star, VolumeUp } from '@mui/icons-material';
 
@@ -32,6 +33,18 @@ export default function TestPage() {
         <h2 className="mb-4 text-xl font-semibold">File Tray</h2>
         <FileTray />
         <h2 className="mb-4 text-xl font-semibold">Acknowledge</h2>
+        <AcknowledgmentItem
+              icon="🎨"
+              title="Park Joo-yeon"
+              description="We express our gratitude for overseeing the overall app design."
+              color='bg-gradient-to-br from-red-500 to-orange-500'
+            />
+            <AcknowledgmentItem
+              icon="💬"
+              title="Koo Geon-mo"
+              description="We also thank for advice and feedback during app development."
+              color='bg-gradient-to-br from-blue-500 to-purple-500'
+            />
       </section>
     </div>
   );
