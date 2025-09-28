@@ -5,6 +5,8 @@ import HeaderIcon from '@/components/HeaderIcon';
 import DownlaodButton from '@/components/DownloadButton';
 import ActivityItem from '@/components/ActivityItem';
 
+import { Battery80, MusicNote, Search, Star, VolumeUp } from '@mui/icons-material';
+
 export default function TestPage() {
   return (
     <div className="mt-8 min-h-screen space-y-10 bg-black p-10 font-sans text-white">
@@ -18,6 +20,14 @@ export default function TestPage() {
         <h2 className="mb-4 text-xl font-semibold">Downlaod Button</h2>
         <DownlaodButton />
         <h2 className="mb-4 text-xl font-semibold">Activity Item</h2>
+        <ActivityItem icon={<Battery80 />} title="Battery" />
+        <ActivityItem icon={<MusicNote />} title="Music" />
+        <ActivityItem icon={<VolumeUp />} title="Sound" />
+        <ActivityItem icon={<Star />} title="Focus" />
+        <ActivityItem icon={<Search />} title="Timer" />
+        <ActivityItem icon={<MusicNote />} title="Lock Screen" />
+        <ActivityItem icon={<MusicNote />} title="Screen Brightness" />
+        <ActivityItem icon={<MusicNote />} title="Alarm" />
         <h2 className="mb-4 text-xl font-semibold">File Tray</h2>
         <h2 className="mb-4 text-xl font-semibold">Acknowledge</h2>
       </section>

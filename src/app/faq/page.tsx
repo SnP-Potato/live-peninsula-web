@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { HiMinus, HiPlus } from 'react-icons/hi';
+import { Add, Remove } from '@mui/icons-material';
 
 const faqs = [
   {
@@ -53,9 +53,9 @@ export default function FAQPage() {
               >
                 <span>{faq.question}</span>
                 {openIndex === i ? (
-                  <HiMinus className="h-5 w-5" />
+                  <Add className="h-5 w-5" />
                 ) : (
-                  <HiPlus className="h-5 w-5" />
+                  <Remove className="h-5 w-5" />
                 )}
               </button>
               {openIndex === i && (
