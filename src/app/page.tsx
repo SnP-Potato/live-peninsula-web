@@ -22,7 +22,7 @@ import {
 export default function DraftPage() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-black font-sans text-white">
-      <div className="mx-auto max-w-4xl px-5 pt-24">
+      <div className="mx-auto max-w-4xl px-5 pt-16">
         {/* Header */}
         <section className="mt-20 mb-20 text-center">
           <LogoIcon />
