@@ -22,7 +22,7 @@ export default function RootLayout({
     <html>
       <body className={`antialiased ${NanumSquareNeo.variable}`}>
         <DynamicIsland />
-        <main>{children}</main>
+        <main className="pt-20">{children}</main>
       </body>
     </html>
   );

@@ -95,7 +95,7 @@ export default function DraftPage() {
 
         {/* Other Section */}
         <section className="my-20">
-          <h2 className="mb-5 text-4xl font-bold">Other</h2>
+          <h2 className="mb-5 text-4xl font-bold">Others</h2>
           <div className="my-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <FeatureCard
               icon={<CalendarMonth className="h-8 w-8 text-green-500" />}
@@ -114,34 +114,30 @@ export default function DraftPage() {
           </div>
         </section>
 
-        {/* Support Section */}
-        <section className="my-20">
-          <h2 className="mb-5 text-4xl font-bold">Support</h2>
-          <div className="rounded-2xl border border-gray-700 bg-gray-800 p-10">
-            <p className="text-xl font-semibold text-blue-500">
-              Supports macOS 14.6 through macOS 26
-            </p>
-          </div>
-        </section>
-
         {/* Acknowledgments */}
         <section className="my-20 mb-16">
-          <h2 className="mb-5 text-4xl font-bold">Acknowledgments</h2>
-          <div className="space-y-6 rounded-2xl border border-gray-700 bg-gray-800 p-10">
-            <AcknowledgmentCard
-              icon="🎨"
-              title="Park Joo-yeon"
-              description="We express our gratitude for overseeing the overall app design."
-              color="bg-gradient-to-br from-pink-500 to-purple-500"
-            />
-            <AcknowledgmentCard
-              icon="💬"
-              title="Koo Geon-mo"
-              description="We also thank for advice and feedback during app development."
-              color="bg-gradient-to-br from-green-500 to-green-600"
-            />
-          </div>
-        </section>
+  <h2 className="mb-5 text-4xl font-bold">👏 Acknowledgments</h2>
+  <div className="space-y-6">
+    <AcknowledgmentCard
+      icon="🎨"
+      title="Park Joo-yeon"
+      description="We express our gratitude for overseeing the overall app design."
+      color="bg-white"
+    />
+    <AcknowledgmentCard
+      icon="💡"
+      title="Koo Geon-mo"
+      description="We also thank for advice and feedback during app development."
+      color="bg-white"
+    />
+    <AcknowledgmentCard
+      icon="🛠️"
+      title="Kim Seung-woo"
+      description="Thank you for creating the website."
+      color="bg-white"
+    />
+  </div>
+</section>
       </div>
     </div>
   );

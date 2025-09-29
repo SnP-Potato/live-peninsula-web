@@ -9,13 +9,13 @@ export default function DynamicIsland() {
     { label: 'Releases', href: '/releases' },
     { label: 'Home', href: '/' },
     { label: 'FAQ', href: '/faq' },
-    { label: 'Issues', href: '/issues' },
+    { label: 'Issues', href: 'https://github.com/SnP-Potato/live-peninsula-web/issues' },
   ];
 
   return (
     <nav className="fixed top-4 left-1/2 z-50 -translate-x-1/2 transform pt-7">
       <div
-        className={`relative flex cursor-pointer items-center justify-center overflow-hidden rounded-3xl border border-gray-700 bg-gray-800 transition-all duration-500 ease-out ${
+        className={`relative flex cursor-pointer items-center justify-center overflow-hidden rounded-3xl border border-gray-700 bg-black-800 transition-all duration-500 ease-out ${
           isHovered ? 'h-12 w-72 sm:w-80' : 'h-9 w-32 sm:w-40'
         }`}
         onMouseEnter={() => setIsHovered(true)}
