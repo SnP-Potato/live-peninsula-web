@@ -37,10 +37,10 @@ export default function DraftPage() {
         <section className="my-20 text-left">
           <h2 className="mb-5 text-4xl font-bold">Description</h2>
           <p className="mb-10 max-w-2xl text-xl text-gray-400">
-            The Dynamic Island on iPhone exists independently on the screen,
+            {`The Dynamic Island on iPhone exists independently on the screen,
             which seems to be why it's called an "Island." I think :) In our
             case, it connects to the top of the screen, giving it the feeling of
-            a peninsula, so we decided to name it "Live Peninsula."
+            a peninsula, so we decided to name it "Live Peninsula."`}
           </p>
         </section>
 
