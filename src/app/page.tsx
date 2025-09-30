@@ -19,9 +19,9 @@ import {
   VolumeUp,
 } from '@mui/icons-material';
 
-export default function DraftPage() {
+export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-black font-sans text-white">
+    <div className="min-h-screen overflow-x-hidden bg-black text-white">
       <div className="mx-auto max-w-4xl px-5 pt-16">
         {/* Header */}
         <section className="mt-20 mb-20 text-center">
