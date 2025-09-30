@@ -14,7 +14,7 @@ export default function ReleasesPage() {
         <ul className="space-y-4">
           <li>
             <a
-              href="/downloads/live-peninsula-beta.dmg"
+              href="https://github.com/SnP-Potato/Live-Peninsula-Release/releases/download/prod/Live.Peninsula.1.0.4.dmg"
               download
               className="bg-accent hover:bg-secondary-alt flex items-center justify-center gap-3 rounded-xl px-6 py-3 font-medium text-white shadow-md transition"
             >
