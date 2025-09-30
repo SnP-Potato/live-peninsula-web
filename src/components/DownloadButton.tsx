@@ -11,7 +11,7 @@ export default function DownloadButton({
 }: DownloadButtonProps) {
   const handleDownload = () => {
     window.location.href =
-      'ref="https://github.com/SnP-Potato/Live-Peninsula-Release/releases/download/prod/Live.Peninsula.1.0.4.dmg"';
+      'https://github.com/SnP-Potato/Live-Peninsula-Release/releases/download/prod/Live.Peninsula.1.0.4.dmg';
   };
 
   return (
