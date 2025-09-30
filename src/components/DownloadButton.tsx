@@ -9,7 +9,7 @@ interface DownloadButtonProps {
 
 export default function DownloadButton({ 
   label = 'Download For Mac',
-  downloadUrl = '/downloads/live-peninsula-beta.dmg'
+  downloadUrl = '/downloads/Live Peninsula Beta.dmg'
 }: DownloadButtonProps) {
   return (
     <a
