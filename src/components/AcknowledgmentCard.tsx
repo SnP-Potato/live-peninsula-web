@@ -5,7 +5,7 @@ interface Props {
   color?: string;
 }
 
-export default function AcknowledgmentItem({
+export default function AcknowledgmentCard({
   icon,
   title,
   description,

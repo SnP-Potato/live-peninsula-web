@@ -1,36 +1,19 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function DynamicIsland() {
   const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  let lastScrollY = 0;
 
   const navItems = [
     { label: 'Releases', href: '/releases' },
+    { label: 'Home', href: '/' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Issues', href: '/issues' },
   ];
 
-  const handleScroll = () => {
-    const currentY = window.scrollY;
-    // Hide when scrolling down, show when scrolling up or near top
-    setIsVisible(currentY < lastScrollY || currentY < 100);
-    lastScrollY = currentY;
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <nav
-      className={`fixed p-10 top-4 left-1/2 z-50 -translate-x-1/2 transform transition-transform duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-20'
-      }`}
-    >
+    <nav className="fixed top-4 left-1/2 z-50 -translate-x-1/2 transform pt-7">
       <div
         className={`relative flex cursor-pointer items-center justify-center overflow-hidden rounded-3xl border border-gray-700 bg-gray-800 transition-all duration-500 ease-out ${
           isHovered ? 'h-12 w-72 sm:w-80' : 'h-9 w-32 sm:w-40'

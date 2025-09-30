@@ -56,9 +56,9 @@ export default function FAQPage() {
               >
                 <span>{faq.question}</span>
                 {openIndex === i ? (
-                  <Add className="h-5 w-5" />
-                ) : (
                   <Remove className="h-5 w-5" />
+                ) : (
+                  <Add className="h-5 w-5" />
                 )}
               </button>
               {openIndex === i && (
