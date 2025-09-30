@@ -5,21 +5,24 @@ import { Add, Remove } from '@mui/icons-material';
 
 const faqs = [
   {
-    question: '이 앱은 어떻게 사용하나요?',
-    answer: '앱을 다운로드하고 설치한 후, 로그인 없이 바로 사용할 수 있어요.',
+    question: 'Supported Platform',
+    answer: 'Currently supports MacOS.',
   },
   {
-    question: '다운로드는 어디서 하나요?',
-    answer:
-      '홈페이지 상단의 "다운로드" 버튼을 클릭하면 다운로드 페이지로 이동합니다.',
+    question: 'Supported macOS Version',
+    answer: 'Supports macOS 14.6 and above.',
   },
   {
-    question: '지원하는 플랫폼은 무엇인가요?',
-    answer: '현재는 MacOS를 지원하고 있습니다.',
+    question: 'Can I use it on a MacBook without a notch?',
+    answer: 'Yes, you can!',
   },
   {
-    question: '문의는 어디로 하나요?',
-    answer: '문의는 contact@example.com 으로 메일 주세요.',
+    question: 'Does it support external monitors?',
+    answer: 'Yes, it does.',
+  },
+  {
+    question: 'Where can I contact you?',
+    answer: 'Please email us at contact@example.com.',
   },
 ];
 
