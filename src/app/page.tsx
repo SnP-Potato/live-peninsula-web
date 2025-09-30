@@ -37,12 +37,23 @@ export default function DraftPage() {
         <section className="my-20 text-left">
           <h2 className="mb-5 text-4xl font-bold">Description</h2>
           <p className="mb-10 max-w-2xl text-xl text-gray-400">
-            {`The Dynamic Island on iPhone exists independently on the screen,
-            which seems to be why it's called an "Island." I think :) In our
-            case, it connects to the top of the screen, giving it the feeling of
-            a peninsula, so we decided to name it "Live Peninsula."`}
+            {`We've applied the iPhone's Dynamic Island to the MacBook.
+The iPhone's Dynamic Island exists independently on the screen—that's probably why it's called an ‘island,’ I think :) In our case, since it connects to the top of the screen and gives a peninsula feel, we've decided to name it the ‘Live Peninsula’."`}
           </p>
         </section>
+
+        <div className="my-10">
+            <video 
+              className="w-full rounded-2xl shadow-2xl" 
+              controls 
+              autoPlay 
+              muted 
+              loop
+            >
+              <source src="vids/Intro.mp4" type="video/mp4" />
+              브라우저가 video 태그를 지원하지 않습니다.
+            </video>
+          </div>
 
         {/* Live Activity Section */}
         <section className="my-20">
