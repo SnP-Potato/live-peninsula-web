@@ -18,6 +18,7 @@ const releases = [
       'Implemented Bluetooth device connection.',
       'Made animations feel more natural.',
       'Redesigned the app icon with a Liquid Glass effect for a deeper, more dimensional look.',
+      'Fixed a bug that caused the Charging Live Activity to appear repeatedly on its own.',
     ],
   },
 ];
