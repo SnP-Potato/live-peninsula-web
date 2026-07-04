@@ -1,17 +1,23 @@
 const releases = [
   {
+    id: 2,
+    version: '1.1.3',
+    title: 'Live Peninsula 1.1.3',
+    date: 'July 4, 2026',
+    highlights: [
+      'Fixed a bug related to Calendar.',
+      'Added a Calendar access permission prompt that links directly to Settings.',
+    ],
+  },
+  {
     id: 1,
     version: '1.1.2',
     title: 'Live Peninsula 1.1.2',
     date: 'July 1, 2026',
     highlights: [
-      "Public beta is live — bring the iPhone's Dynamic Island to your MacBook.",
-      'Added a homepage intro video showing Live Peninsula in action.',
-      'The top navigation now auto-hides on scroll down and reappears on scroll up for a cleaner view.',
-      'Redesigned the download button with a new gradient and shimmer effect, now shipping as "Live Peninsula Beta.dmg".',
-      'Added a dedicated Issues page for bug reports, replacing the external GitHub link.',
-      'Refreshed the FAQ with clearer platform, macOS version, and external monitor support info.',
-      'Polished the logo, feature cards, and this Releases page.',
+      'Implemented Bluetooth device connection.',
+      'Made animations feel more natural.',
+      'Redesigned the app icon with a Liquid Glass effect for a deeper, more dimensional look.',
     ],
   },
 ];

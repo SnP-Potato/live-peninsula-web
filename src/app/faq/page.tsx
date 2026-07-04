@@ -8,7 +8,7 @@ const faqs = [
   { question: 'Supported macOS Version', answer: 'Supports macOS 14.6 and above.' },
   { question: 'Can I use it on a MacBook without a notch?', answer: 'Yes, you can!' },
   { question: 'Does it support external monitors?', answer: 'Yes, it does.' },
-  { question: 'Where can I contact you?', answer: 'Please email us at contact@example.com.' },
+  { question: 'Where can I contact you?', answer: 'Please email us at hoyeonpark0819@gmail.com.' },
 ];
 
 function FAQItem({
