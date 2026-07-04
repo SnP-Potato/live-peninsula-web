@@ -12,7 +12,7 @@ export default function LogoIcon() {
 
       {/* Logo image */}
       <Image
-        src="/imgs/logo-wave.png"
+        src="/imgs/image-wave.png"
         alt="Live Peninsula Logo"
         width={192}
         height={192}
