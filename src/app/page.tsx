@@ -199,15 +199,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Download CTA */}
-        <section className="my-32 text-center">
-          <h2 className="mb-4 text-4xl font-bold">Ready when you are.</h2>
-          <p className="mx-auto mb-10 max-w-xl text-gray-400">
-            Free forever. No account required.
-          </p>
-          <DownloadButton />
-        </section>
-
         {/* Acknowledgments */}
         <section className="my-20">
           <h2 className="mb-5 text-4xl font-bold">Acknowledgments</h2>
