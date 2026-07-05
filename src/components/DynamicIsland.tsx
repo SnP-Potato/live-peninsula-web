@@ -41,7 +41,7 @@ export default function DynamicIsland() {
         isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}>
       <div
-        className={`relative flex cursor-pointer items-center justify-center overflow-hidden rounded-3xl border border-gray-700 bg-gray-800 transition-all duration-500 ease-out ${
+        className={`relative flex cursor-pointer items-center justify-center overflow-hidden rounded-3xl border border-white/10 bg-black shadow-[0_10px_30px_rgba(0,0,0,0.7)] transition-all duration-500 ease-out ${
           isHovered ? 'h-12 w-72 sm:w-80' : 'h-9 w-32 sm:w-40'
         }`}
         onMouseEnter={() => setIsHovered(true)}
