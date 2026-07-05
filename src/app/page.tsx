@@ -7,6 +7,7 @@ import AcknowledgmentCard from '@/components/AcknowledgmentCard';
 import {
   Battery80,
   Bolt,
+  Brightness4,
   CalendarMonth,
   Cloud,
   Headphones,
@@ -195,6 +196,16 @@ export default function Home() {
               </div>
               <h3 className="mb-3 text-2xl font-semibold">Shortcut</h3>
               <p className="text-gray-400">Custom automation triggers for your daily workflow.</p>
+            </div>
+
+            {/* Brightness */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl md:col-span-4">
+              <div className="mb-4 flex items-start justify-between">
+                <Brightness4 className="h-9 w-9 text-blue-400" />
+                <DevTag />
+              </div>
+              <h3 className="mb-3 text-2xl font-semibold">Brightness</h3>
+              <p className="text-gray-400">Adjust your display brightness right from the notch.</p>
             </div>
           </div>
         </section>

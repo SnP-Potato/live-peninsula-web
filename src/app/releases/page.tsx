@@ -7,6 +7,7 @@ const releases = [
     highlights: [
       'Fixed a bug related to Calendar.',
       'Added a Calendar access permission prompt that links directly to Settings.',
+      'Replaced the battery icon with one that matches the macOS 27 design.',
     ],
   },
   {

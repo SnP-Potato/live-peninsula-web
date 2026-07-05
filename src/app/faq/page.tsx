@@ -23,10 +23,10 @@ function FAQItem({
   id: string;
 }) {
   return (
-    <div className="rounded-xl border border-secondary-alt bg-secondary shadow-md">
+    <div className="rounded-xl border border-white/10 bg-white/5 shadow-md backdrop-blur-xl">
       <button
         onClick={onToggle}
-        className="flex w-full items-center justify-between rounded-xl px-5 py-4 text-left text-lg font-semibold transition hover:bg-secondary-alt"
+        className="flex w-full items-center justify-between rounded-xl px-5 py-4 text-left text-lg font-semibold transition hover:bg-white/10"
         aria-expanded={isOpen}
         aria-controls={`faq-${id}`}
       >
