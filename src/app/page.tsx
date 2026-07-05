@@ -197,10 +197,7 @@ export default function Home() {
 
             {/* Brightness */}
             <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl md:col-span-4">
-              <div className="mb-4 flex items-start justify-between">
-                <Brightness4 className="h-9 w-9 text-blue-400" />
-                <DevTag />
-              </div>
+              <Brightness4 className="mb-4 h-9 w-9 text-blue-400" />
               <h3 className="mb-3 text-2xl font-semibold">Brightness</h3>
               <p className="text-gray-400">Adjust your display brightness right from the notch.</p>
             </div>
