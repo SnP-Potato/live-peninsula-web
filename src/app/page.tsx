@@ -98,10 +98,7 @@ export default function Home() {
 
             {/* Focus Timer */}
             <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl md:col-span-4">
-              <div className="mb-4 flex items-start justify-between">
-                <TimerOutlined className="h-9 w-9 text-blue-400" />
-                <DevTag />
-              </div>
+              <TimerOutlined className="mb-4 h-9 w-9 text-blue-400" />
               <h3 className="mb-3 text-2xl font-semibold">Focus Timer</h3>
               <p className="mb-6 text-gray-400">
                 A minimalist Pomodoro timer that lives in the periphery of your vision.
