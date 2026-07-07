@@ -18,9 +18,11 @@ import {
   TimerOutlined,
 } from '@mui/icons-material';
 
-function DevTag() {
+function DevTag({ hidden = false }: { hidden?: boolean }) {
   return (
-    <span className="rounded bg-blue-500/20 px-2 py-0.5 text-[10px] font-bold tracking-wide text-blue-400 uppercase">
+    <span
+      className={`rounded bg-blue-500/20 px-2 py-0.5 text-[10px] font-bold tracking-wide text-blue-400 uppercase ${hidden ? 'invisible' : ''}`}
+    >
       Dev
     </span>
   );
@@ -141,6 +143,7 @@ export default function Home() {
               </p>
               <div className="flex items-center gap-6">
                 <div className="flex flex-col items-center gap-1">
+                  <DevTag hidden />
                   <Headphones className="h-6 w-6 text-white" />
                   <span className="text-xs font-bold text-blue-400">84%</span>
                 </div>
@@ -165,10 +168,7 @@ export default function Home() {
 
             {/* Lock Screen */}
             <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl md:col-span-4">
-              <div className="mb-4 flex items-start justify-between">
-                <Lock className="h-9 w-9 text-blue-400" />
-                <DevTag />
-              </div>
+              <Lock className="mb-4 h-9 w-9 text-blue-400" />
               <h3 className="mb-3 text-2xl font-semibold">Lock Screen</h3>
               <p className="text-gray-400">
                 Quickly secure your Mac with a single click from the notch.
