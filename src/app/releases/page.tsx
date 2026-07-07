@@ -1,5 +1,15 @@
 const releases = [
   {
+    id: 3,
+    version: '1.1.4',
+    title: 'Live Peninsula 1.1.4',
+    date: 'July 7, 2026',
+    highlights: [
+      'Added Lock Screen control from the notch.',
+      'Fixed a bug where reconnecting an external monitor could leave a ghost notch window floating over other apps.',
+    ],
+  },
+  {
     id: 2,
     version: '1.1.3',
     title: 'Live Peninsula 1.1.3',
