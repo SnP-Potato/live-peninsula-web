@@ -1,17 +1,14 @@
-'use client';
-
-export default function DownloadButton({ label = 'Download For Mac' }: { label?: string }) {
-  const handleDownload = () => {
-    window.location.href = '/api/download';
-  };
-
+export default function DownloadButton({
+  label = 'Download For Mac',
+}: {
+  label?: string;
+}) {
   return (
-    <button
-      onClick={handleDownload}
-      className="group relative inline-block overflow-hidden rounded-3xl bg-gradient-to-r from-blue-300 to-blue-600 px-8 py-4 text-lg font-semibold text-white transition-transform duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_35px_rgba(0,122,255,0.4)]"
+    <a
+      href="/api/download"
+      className="pressable inline-flex items-center justify-center rounded-full bg-action px-7 py-3.5 text-[17px] font-medium tracking-[-0.01em] text-white no-underline hover:bg-action-hover"
     >
-      <div className="absolute top-0 left-[-100%] h-full w-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-all duration-500 group-hover:left-[100%]" />
-      <span className="relative z-10">{label}</span>
-    </button>
+      {label}
+    </a>
   );
 }

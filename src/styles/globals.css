@@ -3,19 +3,238 @@
 @import './themes.css';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+
+  --background: #000000;
+  --foreground: #f5f5f7;
+
+  /* Springs, expressed as CSS linear() easings.
+     --spring:       critically damped (damping 1.0) — the default for UI.
+     --spring-bouncy: damping ~0.8 — only for things that carry momentum. */
+  --spring: linear(
+    0,
+    0.0377,
+    0.1243,
+    0.2314,
+    0.3425,
+    0.4481,
+    0.5435,
+    0.6268,
+    0.6977,
+    0.7571,
+    0.8061,
+    0.8461,
+    0.8785,
+    0.9044,
+    0.9251,
+    0.9415,
+    0.9545,
+    0.9647,
+    0.9726,
+    0.9788,
+    0.9837,
+    0.9874,
+    0.9903,
+    0.9926,
+    0.9943,
+    0.9957,
+    0.9967,
+    0.9975,
+    1
+  );
+  --spring-bouncy: linear(
+    0,
+    0.0413,
+    0.1394,
+    0.2645,
+    0.3965,
+    0.5225,
+    0.6354,
+    0.7316,
+    0.8104,
+    0.8727,
+    0.9202,
+    0.955,
+    0.9796,
+    0.9961,
+    1.0064,
+    1.0121,
+    1.0147,
+    1.0151,
+    1.0142,
+    1.0126,
+    1.0107,
+    1.0087,
+    1.0068,
+    1.0051,
+    1.0038,
+    1.0026,
+    1.0017,
+    1.0011,
+    1.0006,
+    1.0002,
+    1
+  );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #080a0f;
-    --foreground: #f0f0f5;
-  }
+html {
+  background: var(--background);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-nsn, sans-serif);
+  font-family: var(--font-sans);
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgb(10 132 255 / 0.4);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- Display type: tracking tightens as size grows ---------- */
+
+.type-display {
+  font-size: clamp(3.25rem, 9vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.type-headline {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: -0.028em;
+  text-wrap: balance;
+}
+
+.type-title {
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+
+.type-lead {
+  font-size: clamp(1.1875rem, 2.2vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: -0.012em;
+}
+
+/* ---------- The island: pure black, like the real notch ---------- */
+
+.island {
+  background: #000;
+  /* faint top highlight + hairline so it separates from black pages */
+  box-shadow:
+    inset 0 0.5px 0 rgb(255 255 255 / 0.16),
+    0 0 0 1px rgb(255 255 255 / 0.12),
+    0 12px 40px rgb(0 0 0 / 0.6);
+}
+
+/* ---------- Press feedback: instant on pointer-down ---------- */
+
+.pressable {
+  transition:
+    transform 0.6s var(--spring),
+    background-color 0.25s ease-out;
+}
+.pressable:active {
+  transform: scale(0.97);
+  transition-duration: 0.1s, 0.1s;
+  transition-timing-function: ease-out;
+}
+
+/* ---------- Entrance: hero (on load) ---------- */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.985);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+.rise {
+  animation: rise 1s var(--spring) both;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+
+/* ---------- Entrance: sections (on scroll, see <Reveal />) ---------- */
+
+.reveal[data-reveal='hidden'] {
+  opacity: 0;
+  transform: translateY(32px);
+  filter: blur(6px);
+}
+.reveal[data-reveal='shown'] {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+  transition:
+    opacity 0.9s var(--spring),
+    transform 0.9s var(--spring),
+    filter 0.9s var(--spring);
+  transition-delay: var(--delay, 0ms);
+}
+
+/* ---------- Accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  /* No travel, no blur, no overshoot — just a short cross-fade. */
+  .rise {
+    animation: fade 0.25s ease both;
+    animation-delay: 0ms;
+  }
+  .reveal[data-reveal='hidden'] {
+    transform: none;
+    filter: none;
+  }
+  .reveal[data-reveal='shown'] {
+    transition: opacity 0.25s ease;
+    transition-delay: 0ms;
+  }
+  .pressable,
+  .pressable:active {
+    transition: background-color 0.2s ease;
+    transform: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .island {
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.6);
+  }
+  :root {
+    --color-label-secondary: #c7c7cc;
+  }
 }

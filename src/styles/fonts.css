@@ -1,11 +1,8 @@
-@font-face {
-  font-family: 'NanumSquareNeo';
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  src: url('/fonts/NanumSquareNeo-Variable.woff2') format('woff2-variations');
-}
-
+/* The system font already ships optical sizing, tracking tables, and Korean
+   glyphs (Apple SD Gothic Neo) on Apple platforms, so we lead with it. */
 @theme {
-  --font-nsn: 'NanumSquareNeo', sans-serif;
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+    'Apple SD Gothic Neo', system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }

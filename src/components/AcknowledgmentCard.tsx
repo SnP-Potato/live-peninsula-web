@@ -2,25 +2,32 @@ interface Props {
   icon: React.ReactNode;
   title: string;
   description: string;
+  /** Tailwind background classes for the icon tile. */
   color?: string;
 }
 
+/** One row of an inset grouped list — dividers come from the parent. */
 export default function AcknowledgmentCard({
   icon,
   title,
   description,
-  color = 'bg-green-500',
+  color = 'bg-surface-raised',
 }: Props) {
   return (
-    <div className="flex items-center my-5 p-5 bg-gray-700 rounded-2xl">
+    <div className="flex items-center gap-4 px-5 py-4 sm:px-6 sm:py-5">
       <div
-        className={`w-12 h-12 mr-5 rounded-full flex items-center justify-center text-2xl ${color}`}
+        aria-hidden="true"
+        className={`flex size-12 shrink-0 items-center justify-center rounded-[22.37%] text-2xl ${color}`}
       >
         {icon}
       </div>
-      <div className="flex-1">
-        <h4 className="text-xl mb-1">{title}</h4>
-        <p className="text-gray-400">{description}</p>
+      <div className="min-w-0 flex-1">
+        <h3 className="text-[17px] font-semibold tracking-[-0.01em] text-label">
+          {title}
+        </h3>
+        <p className="mt-0.5 text-[15px] leading-snug text-label-secondary">
+          {description}
+        </p>
       </div>
     </div>
   );

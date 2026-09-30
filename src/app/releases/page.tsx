@@ -36,30 +36,38 @@ const releases = [
 
 export default function ReleasesPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
-      <div className="mx-auto max-w-4xl px-6 py-20">
-        {/* Title */}
-        <h1 className="mb-8 text-6xl font-bold">Releases</h1>
+    <div className="min-h-screen bg-canvas text-label">
+      <div className="mx-auto max-w-3xl px-6 pt-40 pb-32 sm:pt-48">
+        <h1
+          className="type-display rise text-center"
+          style={{ '--i': 0 } as React.CSSProperties}
+        >
+          Releases
+        </h1>
 
-        {/* Divider */}
-        <div className="mb-12 h-px bg-gray-700"></div>
-
-        {/* Release notes list */}
-        <div className="space-y-16">
-          {releases.map((release) => (
-            <article key={release.id}>
-              <div className="mb-3 flex items-center gap-3">
-                <span className="rounded-full bg-blue-500/20 px-3 py-1 text-sm font-semibold text-blue-400">
+        <div className="mt-16 space-y-4 sm:mt-20">
+          {releases.map((release, i) => (
+            <article
+              key={release.id}
+              className="rise rounded-[28px] bg-surface px-6 py-8 sm:px-12 sm:py-12"
+              style={{ '--i': i + 1 } as React.CSSProperties}
+            >
+              <div className="flex items-center gap-3">
+                <span className="rounded-full bg-white/10 px-3 py-1 text-[13px] font-semibold text-label">
                   {release.version}
                 </span>
-                <span className="text-sm text-gray-500">{release.date}</span>
+                <span className="text-[13px] text-label-tertiary">
+                  {release.date}
+                </span>
               </div>
-              <h2 className="mb-5 text-3xl font-bold">{release.title}</h2>
-              <ul className="space-y-3">
+              <h2 className="type-title mt-5">{release.title}</h2>
+              <ul className="mt-6 divide-y divide-hairline">
                 {release.highlights.map((item, idx) => (
-                  <li key={idx} className="flex gap-3 text-lg text-gray-400">
-                    <span className="text-blue-400">•</span>
-                    <span>{item}</span>
+                  <li
+                    key={idx}
+                    className="py-3.5 text-[17px] leading-snug text-label-secondary first:pt-0 last:pb-0"
+                  >
+                    {item}
                   </li>
                 ))}
               </ul>
@@ -67,6 +75,6 @@ export default function ReleasesPage() {
           ))}
         </div>
       </div>
-    </main>
+    </div>
   );
 }

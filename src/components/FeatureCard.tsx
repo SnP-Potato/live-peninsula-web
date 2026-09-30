@@ -1,33 +1,50 @@
-'use client';
-
 import React from 'react';
+
+export function SoonTag({ hidden = false }: { hidden?: boolean }) {
+  return (
+    <span
+      aria-hidden={hidden || undefined}
+      className={`rounded-full bg-white/10 px-2.5 py-1 text-[11px] leading-none font-medium whitespace-nowrap text-label-secondary ${
+        hidden ? 'invisible' : ''
+      }`}
+    >
+      Coming soon
+    </span>
+  );
+}
 
 interface FeatureCardProps {
   icon: React.ReactNode;
   title: string;
-  inDevelopment?: boolean;
+  /** Tailwind gradient stops for the icon tile, e.g. "from-green-400 to-green-600". */
+  tint: string;
+  soon?: boolean;
+  children?: React.ReactNode;
 }
 
+/** An app-icon-style tile, title, and description on a flat surface. */
 export default function FeatureCard({
   icon,
   title,
-  inDevelopment,
+  tint,
+  soon,
+  children,
 }: FeatureCardProps) {
   return (
-    <div className="group relative cursor-pointer overflow-hidden rounded-2xl border border-gray-700 bg-gray-800 p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:border-gray-600 hover:bg-gray-900 hover:shadow-[0_15px_35px_rgba(0,122,255,0.2)]">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-      <div className="${iconClass} relative mx-auto mb-4 flex h-20 w-20 items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2">
-        <div className="scale-[2]">{icon}</div>
+    <div className="flex h-full flex-col rounded-[28px] bg-surface p-8 sm:p-10">
+      <div className="flex items-start justify-between gap-4">
+        <div
+          className={`flex size-14 items-center justify-center rounded-[22.37%] bg-gradient-to-b text-white shadow-[inset_0_0.5px_0_rgb(255_255_255/0.35),0_6px_16px_rgb(0_0_0/0.35)] ${tint}`}
+        >
+          {icon}
+        </div>
+        {soon && <SoonTag />}
       </div>
 
-      <h3 className="relative z-10 mb-1 text-lg">{title}</h3>
-
-      {inDevelopment && (
-        <div className="mt-1 inline-block rounded-lg bg-orange-500/20 px-2 py-1 text-xs text-orange-400">
-          Dev
-        </div>
-      )}
+      <h3 className="type-title mt-6">{title}</h3>
+      <div className="mt-3 text-[17px] leading-snug text-label-secondary">
+        {children}
+      </div>
     </div>
   );
 }

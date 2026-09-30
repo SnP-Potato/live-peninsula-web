@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Add, Remove } from '@mui/icons-material';
+import { Add } from '@mui/icons-material';
 
 const faqs = [
   { question: 'Supported Platform', answer: 'Currently supports macOS.' },
@@ -11,64 +11,75 @@ const faqs = [
   { question: 'Where can I contact you?', answer: 'Please email us at hoyeonpark0819@gmail.com.' },
 ];
 
-function FAQItem({
-  faq,
-  isOpen,
-  onToggle,
-  id,
-}: {
-  faq: { question: string; answer: string };
-  isOpen: boolean;
-  onToggle: () => void;
-  id: string;
-}) {
-  return (
-    <div className="rounded-xl border border-white/10 bg-white/5 shadow-md backdrop-blur-xl">
-      <button
-        onClick={onToggle}
-        className="flex w-full items-center justify-between rounded-xl px-5 py-4 text-left text-lg font-semibold transition hover:bg-white/10"
-        aria-expanded={isOpen}
-        aria-controls={`faq-${id}`}
-      >
-        <span>{faq.question}</span>
-        {isOpen ? <Remove className="h-5 w-5" /> : <Add className="h-5 w-5" />}
-      </button>
-      {isOpen && (
-        <div
-          id={`faq-${id}`}
-          className="px-5 pb-4 text-sm leading-relaxed text-textlight/80"
-        >
-          {faq.answer}
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  return (
-    <main className="min-h-screen bg-black px-6 py-16 text-textlight">
-      <div className="mx-auto mt-16 flex max-w-6xl flex-col gap-12 md:flex-row">
-        {/* Left: Title */}
-        <div className="flex items-start justify-center md:w-1/3 md:justify-start">
-          <h1 className="text-5xl font-extrabold tracking-tight md:text-6xl">FAQ</h1>
-        </div>
+  const toggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
-        {/* Right: FAQ List */}
-        <div className="space-y-4 md:w-2/3">
-          {faqs.map((faq, i) => (
-            <FAQItem
-              key={faq.question}
-              faq={faq}
-              isOpen={openIndex === i}
-              onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-              id={String(i)}
-            />
-          ))}
-        </div>
+  return (
+    <div className="min-h-screen bg-canvas text-label">
+      <div className="mx-auto max-w-3xl px-6 pt-40 pb-32 sm:pt-48">
+        <h1
+          className="type-display rise text-center"
+          style={{ '--i': 0 } as React.CSSProperties}
+        >
+          FAQ
+        </h1>
+
+        <ul
+          className="rise mt-16 divide-y divide-hairline border-y border-hairline sm:mt-20"
+          style={{ '--i': 1 } as React.CSSProperties}
+        >
+          {faqs.map((faq, i) => {
+            const isOpen = openIndex === i;
+
+            return (
+              <li key={faq.question}>
+                <h2>
+                  <button
+                    type="button"
+                    id={`faq-question-${i}`}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${i}`}
+                    onClick={() => toggle(i)}
+                    className="-mx-4 flex w-[calc(100%+2rem)] items-center justify-between gap-6 rounded-2xl px-4 py-6 text-left text-[19px] font-semibold tracking-[-0.015em] transition-colors duration-200 hover:bg-white/[0.04] active:bg-white/[0.08] sm:text-[21px]"
+                  >
+                    <span>{faq.question}</span>
+                    <Add
+                      aria-hidden="true"
+                      className={`shrink-0 text-label-secondary transition-transform duration-500 ease-(--spring) motion-reduce:transition-none ${
+                        isOpen ? 'rotate-45' : ''
+                      }`}
+                    />
+                  </button>
+                </h2>
+
+                {/* grid-rows 0fr → 1fr animates to the content's own height,
+                    and retargets from wherever it is if toggled mid-flight. */}
+                <div
+                  id={`faq-answer-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${i}`}
+                  inert={!isOpen}
+                  className={`grid transition-[grid-template-rows,opacity] duration-500 ease-(--spring) motion-reduce:duration-200 motion-reduce:ease-out ${
+                    isOpen
+                      ? 'grid-rows-[1fr] opacity-100'
+                      : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="pb-6 text-[17px] leading-relaxed text-label-secondary">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-    </main>
+    </div>
   );
 }
