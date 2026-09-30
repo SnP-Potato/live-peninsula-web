@@ -1,5 +1,24 @@
 const releases = [
   {
+    id: 4,
+    version: '2.0.0',
+    title: 'Live Peninsula 2.0.0',
+    date: 'September 30, 2026',
+    highlights: [
+      'Liquid Glass on the notch is now controlled by a single Glass Clarity slider (Settings > Notch Material).',
+      'Redesigned the Tray tab.',
+      'Dragging a file to the notch now opens the Tray automatically.',
+      'Added a gold border to the Lock Screen music card and replaced its controls with Heart and AirPlay buttons, realigned to match.',
+      'Refined the Studio screen.',
+      'Changed the Bluetooth battery ring colors.',
+      'Added an AirPods 3D model. This grows the app from 11 MB to 22 MB.',
+      'Fixed a bug where the connection HUD reappeared when an AirPods profile changed.',
+      'Fixed a build error with Xcode 27.',
+      'Improved the overall app architecture.',
+      'Rotated the Sparkle update signing key.',
+    ],
+  },
+  {
     id: 3,
     version: '1.1.4',
     title: 'Live Peninsula 1.1.4',
